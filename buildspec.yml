@@ -9,7 +9,7 @@ phases:
       - yarn install
   build:
     commands:
-      - yarn build
+      - echo build
   post_build:
     commands:
       - echo nothing to do
