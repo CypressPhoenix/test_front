@@ -7,11 +7,19 @@ phases:
     commands:
       - npm install
 
+  pre_build:
+    commands:
+      # Install n package manager
+      - npm install -g n
+
+  build:
+    commands:
+      # Update Node.js version to 14
+      - n 14
   build:
     commands:
       - npm run build
-      - aws s3 sync dist/ s3://frontinframain-bucketforfrontendmain1c67891b-10h4q1ll9k74j
-
+      - aws s3 sync dist/ s3://frontmain-frontmainartifactsbucket879156a5-1cxflqqjchjnd
 post_build:
   commands:
     - aws cloudfront create-invalidation --distribution-id EK8PDLNVW7CQU --paths "/*"
