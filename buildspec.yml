@@ -12,7 +12,7 @@ phases:
       - aws s3 sync dist/ s3://frontinframain-bucketforfrontendmain1c67891b-16efmw5oy7zxb
 post_build:
   commands:
-    - aws cloudfront create-invalidation --distribution-id EK8PDLNVW7CQU --paths "/*"
+    - aws cloudfront create-invalidation --distribution-id E2X4DJ459H6IN --paths "/*"
 
 artifacts:
   files:
