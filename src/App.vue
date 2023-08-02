@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      greeting: 'Hello World Test',
+      greeting: 'Hello World',
     };
   },
 };
