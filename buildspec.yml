@@ -13,7 +13,7 @@ phases:
       - aws cloudfront create-invalidation --distribution-id E2X4DJ459H6IN --paths "/*"
 post_build:
   commands:
-    - aws cloudfront create-invalidation --distribution-id E2X4DJ459H6IN --paths "/*"
+    - aws cloudfront create-invalidation --distribution-id E2GXNLN42XGQTH --paths "/*"
 
 artifacts:
   files:
