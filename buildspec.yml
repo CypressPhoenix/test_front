@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - npm run build
-      - aws s3 sync dist/ s3://frontinframain-bucketforfrontendmain1c67891b-16efmw5oy7zxb
+      - aws s3 sync dist/ s3://bucketbforfrontmain
       - aws cloudfront create-invalidation --distribution-id E2X4DJ459H6IN --paths "/*"
 post_build:
   commands:
